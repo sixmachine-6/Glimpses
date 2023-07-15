@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h3>Glimpses Section</h3>
+      <p><span>Welcome to the Glimpses section!</span>Take a nostalgic 
+        journey through the vibrant and captivating moments 
+        of our previous college fest. Browse through our curated 
+        collection of photos that encapsulate the energy, excitement, 
+        and memories created during this grand celebration. Get ready to
+        relive the magic of our fest through this captivating visual experience!
+        </p>
+    </div>
+    <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="image.jpg" style="width:100%">
+  </div>
+   
+    
+  <div class="mySlides fade">
+    <img src="image2.jpg" style="width:100%">
+  </div>
+      
+  <div class="mySlides fade">
+    <img src="image4.jpg" style="width:100%">
+  </div>
+    
+    
+  <div class="mySlides fade">
+    <img src="image5.jpg" style="width:100%">
+  </div>  
+    
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}</script>
+</body>
+</html>
